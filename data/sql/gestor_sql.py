@@ -1,0 +1,17 @@
+CRIAR_TABELA = """
+CREATE TABLE IF NOT EXISTS gestor (
+cod_gestor INTEGER PRIMARY KEY FOREIGN KEY AUTOINCREMENT,
+cnpj TEXT FOREIGN KEY NOT NULL
+)
+"""
+
+INSERIR = """
+INSERT INTO gestor (cnpj) 
+VALUES (?)
+"""
+
+OBTER_TODOS = """
+SELECT 
+cod_gestor, cnpj
+FROM gestor
+""" 
